@@ -35,8 +35,8 @@ NoFade
 ENDA
 
 LocationBasedEvents:
-Village(0x8,VillagePureWater,8,7)
-Vendor(ShopItems,7,12)
+Village(0x8,VillagePureWater,10,2)
+Vendor(ShopItems,9,5)
 END_MAIN
 
 VillagePureWater:
@@ -85,7 +85,7 @@ UNIT Breguet Fighter 0x00 Level(3, Enemy, 1) [3,1] 0x00 0x00 0x0 0x00 [SilverAxe
 UNIT
 
 BrigandReinforcementUnit:
-UNIT 0x80 Brigand 0x00 Level(1, Enemy, 1) [28,0] 0x02 0x00 0x0 0x00 [IronAxe] BrigandAI
+UNIT 0x80 Brigand 0x00 Level(1, Enemy, 1) [4,0] 0x02 0x00 0x0 0x00 [IronAxe] BrigandAI
 UNIT
 
 Traps1:

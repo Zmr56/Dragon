@@ -1,0 +1,302 @@
+/// begin Mode 1
+C03
+C07
+C55
+4  p- stand.png
+4  p- 1.png
+4  p- 2.png
+4  p- 3.png
+4  p- 4.png
+C22
+C2B
+15  p- 5.png
+C22
+C2B
+4  p- 6.png
+4  p- 7.png
+4  p- 8.png
+4  p- 9.png
+4  p- 10.png
+4  p- 11.png
+C15
+C2B
+4  p- 12.png
+4  p- 13.png
+30  p- 14.png
+C19
+20  p- 15.png
+40  p- 16.png
+C22
+4  p- 17.png
+C05
+30  p- 18.png
+C01
+C2B
+4  p- 19.png
+4  p- 20.png
+4  p- 21.png
+C2B
+C15
+4  p- 22.png
+4  p- 23.png
+C06
+6  p- stand.png
+C0D
+/// end
+~~~
+/// begin Mode 3
+C03
+C07
+C55
+4  p- stand.png
+4  p- 1.png
+4  p- 2.png
+4  p- 3.png
+4  p- 4.png
+C22
+C15
+C2B
+2  p- c1.png
+3  p- c2.png
+C24
+3  p- c3.png
+3  p- c4.png
+3  p- c5.png
+C24
+3  p- c6.png
+3  p- c7.png
+3  p- c2.png
+C24
+3  p- c3.png
+3  p- c4.png
+3  p- c5.png
+C24
+3  p- c6.png
+3  p- c7.png
+C15
+C2B
+3  p- c8.png
+C24
+3  p- c9.png
+3  p- c10.png
+3  p- c11.png
+C24
+3  p- c8.png
+3  p- c9.png
+3  p- c10.png
+3  p- c11.png
+30  p- 14.png
+C19
+20  p- 15.png
+40  p- 16.png
+C22
+4  p- 17.png
+C05
+30  p- 18.png
+C01
+C2B
+4  p- 19.png
+4  p- 20.png
+4  p- 21.png
+C2B
+C15
+4  p- 22.png
+4  p- 23.png
+C06
+6  p- stand.png
+C0D
+/// end
+~~~
+/// begin Mode 5
+C03
+C07
+C55
+4  p- stand.png
+4  p- 1.png
+4  p- 2.png
+4  p- 3.png
+4  p- 4.png
+C22
+C2B
+15  p- 5.png
+C22
+C2B
+4  p- 6.png
+4  p- 7.png
+4  p- 8.png
+4  p- 9.png
+4  p- 10.png
+4  p- 11.png
+C15
+C2B
+4  p- 12.png
+4  p- 13.png
+30  p- 14.png
+C19
+20  p- 15.png
+40  p- 16.png
+C22
+4  p- 17.png
+C05
+30  p- 18.png
+C2B
+4  p- 19.png
+4  p- 20.png
+4  p- 21.png
+C2B
+C15
+4  p- 22.png
+4  p- 23.png
+C06
+6  p- stand.png
+C0D
+/// end
+~~~
+/// begin Mode 6
+C03
+C07
+C55
+4  p- stand.png
+4  p- 1.png
+4  p- 2.png
+4  p- 3.png
+4  p- 4.png
+C22
+C15
+C2B
+2  p- c1.png
+3  p- c2.png
+C24
+3  p- c3.png
+3  p- c4.png
+3  p- c5.png
+C24
+3  p- c6.png
+3  p- c7.png
+3  p- c2.png
+C24
+3  p- c3.png
+3  p- c4.png
+3  p- c5.png
+C24
+3  p- c6.png
+3  p- c7.png
+C15
+C2B
+3  p- c8.png
+C24
+3  p- c9.png
+3  p- c10.png
+3  p- c11.png
+C24
+3  p- c8.png
+3  p- c9.png
+3  p- c10.png
+3  p- c11.png
+30  p- 14.png
+C19
+20  p- 15.png
+40  p- 16.png
+C22
+4  p- 17.png
+C05
+30  p- 18.png
+C01
+C2B
+4  p- 19.png
+4  p- 20.png
+4  p- 21.png
+C2B
+C15
+4  p- 22.png
+4  p- 23.png
+C06
+6  p- stand.png
+C0D
+/// end
+~~~
+/// begin Mode 7
+C02
+1  p- stand.png
+3  p- Avoid1.png
+C2B
+1  p- Avoid2.png
+C01
+1  p- stand.png
+C2B
+C0D
+/// end
+~~~
+/// begin Mode 8
+C02
+1  p- stand.png
+3  p- Avoid1.png
+C2B
+1  p- Avoid2.png
+C01
+1  p- stand.png
+C2B
+C0D
+/// end
+~~~
+/// begin Mode 9
+7  p- stand.png
+C01
+/// end
+~~~
+/// begin Mode 10
+7  p- stand.png
+C01
+/// end
+~~~
+/// - begin Mode 11
+7  p- stand.png
+C01
+~~~
+/// - begin Mode 12
+C03
+C07
+C55
+4  p- stand.png
+4  p- 1.png
+4  p- 2.png
+4  p- 3.png
+4  p- 4.png
+C22
+C2B
+15  p- 5.png
+C22
+C2B
+4  p- 6.png
+4  p- 7.png
+4  p- 8.png
+4  p- 9.png
+4  p- 10.png
+4  p- 11.png
+C15
+C2B
+4  p- 12.png
+4  p- 13.png
+30  p- 14.png
+C19
+15  p- 15.png
+30  p- 16.png
+C22
+4  p- 17.png
+C05
+30  p- 18.png
+C01
+C2B
+4  p- 19.png
+4  p- 20.png
+4  p- 21.png
+C2B
+C15
+4  p- 22.png
+4  p- 23.png
+C06
+6  p- stand.png
+C0D
+/// end
+~~~
+/// End of animation script

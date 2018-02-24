@@ -1,0 +1,118 @@
+#ifndef CCB_DEFINITIONS
+#define CCB_DEFINITIONS
+
+#define FreeSpace 0xb2a610
+#define FreeSpaceBLRange 0x1c1ec0
+
+#define ChapterTileset(chapter, object, palette, config) "PUSH; ORG 0x8b0890 + (148* chapter) + 4; SHORT object; BYTE palette config; POP"
+#define ChapterTileAnims(chapter, anim1, anim2) "PUSH; ORG 0x8b0890 + (148* chapter) + 9; BYTE anim1 anim2; POP"
+
+#ifndef ItemTable
+  #define ItemTable 0x809B10
+#endif
+#ifndef DebuffTable
+    #define DebuffTable 0x203F100
+#endif
+
+#define LunarBrace MoonBracelet
+#define SolarBrace SunBracelet
+
+#include "Engine Hacks/Skill System/skill_definitions.event"
+
+#define Void 1
+#define Tim 2
+#define Tam 3
+#define Jerome 4
+#define Leeroy 5
+#define Anna 6
+#define Bede 7
+#define Jay 8
+#define NotArch 9
+#define Kirsten 10
+#define Bob 11
+#define Roshea 12
+#define Prine 13
+#define Edge 14
+//no ephraim replacement
+#define Samson 16
+#define Arve 17
+#define Tye 18
+#define Celicia 19
+#define Eevster 20
+#define AnnaWyv 21
+#define Nikita 22
+#define AnnaRogue 23
+#define Edgeworth 24
+#define Zigludo 25
+#define Kaga 26
+#define Doot 27
+#define Celica 28
+#define Doowile 29
+#define EvilFlorina 30
+#define Bjoern 31
+#define Jake 32
+#define Marf 33
+#define Tiki 34
+
+#define Mark 36
+
+#define Lyria 0x60
+#define Meriah 0x61
+#define Plum 0x62
+#define Yuni 0x63
+
+#define Ch8Boss 0x4D
+#define Ch8Generic 0x99
+#define Ch21Boss 0xC5
+#define Ch21Generic 0x9A
+
+#define SwordPegasus 0x48
+#define LancePegasus 0x24
+#define AxeCavalier 0x35
+#define AxePaladin 0x36
+
+#define WFBad 0xd0
+#define SwordfaireBad 0xd1
+#define LancefaireBad 0xd2
+#define AxefaireBad 0xd3
+#define BowfaireBad 0xd4
+#define TomefaireBad 0xd5
+#define QuickDrawBad 0xd6
+#define CertainBlowBad 0xd7
+#define ArmoredBlowBad 0xd8
+#define DartingBlowBad 0xd9
+#define DeathBlowBad 0xda
+#define BowbreakerBad 0xdb
+#define AxebreakerBad 0xdc
+#define SwordbreakerBad 0xdd
+#define LancebreakerBad 0xde
+#define TomebreakerBad 0xdf
+#define SavageBlowBad 0xe0
+#define InspirationBad 0xe1
+#define AnathemaBad 0xe2
+#define BondBad 0xe3
+#define CounterBad 0xe4
+#define CounterMBad 0xe5
+#define PassBad 0xe6
+#define CelerityBad 0xe7
+#define LnDBad 0xe8
+#define LungeBad 0xe9
+#define SpurStrBad 0xea
+#define SpurMagicBad 0xeb
+#define SpurDefBad 0xec
+#define SpurSpdBad 0xed
+#define SealDefBad 0xee
+#define SealResBad 0xef
+#define DespBad 0xf0
+#define WrathBad 0xf1
+#define AcrobatBad 0xf2
+#define MaleficAuraBad 0xf3
+
+#define Hurricane 0xAD
+#define Cardea 0x9A
+#define Petrify 0xb5
+#define SlimSpear 0x9b
+
+#define SetSkills(character, first, second, third, fourth) "SETVAL 0x2 first; SETVAL 0x3 (0x203e885+(character*16)); SETVAL 0x4 0x2; ASMC EventWriter+1;SETVAL 0x2 (second + (third*0x100)); SETVAL 0x3 (0x203e886+(character*16)); SETVAL 0x4 0x1; ASMC EventWriter+1;SETVAL 0x2 fourth; SETVAL 0x3 (0x203e888+(character*16)); SETVAL 0x4 0x2; ASMC EventWriter+1;"
+
+#endif

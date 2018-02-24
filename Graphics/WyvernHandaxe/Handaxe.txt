@@ -1,0 +1,157 @@
+/// - Begin Mode 1 - Normal Attack (Layered in Front)
+C03
+C07
+1  p- Norm00.png
+4  p- Norm01.png
+C41
+4  p- Norm02.png
+15  p- Norm03.png
+C42
+C05
+3  p- Norm04.png
+1  p- Norm05.png
+C13
+4  p- Norm06.png
+3  p- Norm07.png
+3  p- Norm08.png
+1  p- Norm00.png
+C01
+C06
+C0D
+/// - End Mode 1
+~~~
+/// - Begin Mode 3 - Critical Attack (Layered in Front)
+C03
+C07
+1  p- Norm00.png
+4  p- Norm01.png
+C41
+10  p- Norm02.png
+C38
+4  p- Crit03.png
+4  p- Crit04.png
+4  p- Crit05.png
+C37
+4  p- Crit06.png
+20  p- Crit07.png
+C42
+C05
+3  p- Norm04.png
+1  p- Norm05.png
+C13
+4  p- Norm06.png
+3  p- Norm07.png
+3  p- Norm08.png
+1  p- Norm00.png
+C01
+C06
+C0D
+/// - End Mode 3
+~~~
+/// - Begin Mode 5 - Magic/Range Attack
+C03
+C07
+1  p- Norm00.png
+4  p- Norm01.png
+C41
+4  p- Norm02.png
+15  p- Norm03.png
+C42
+C05
+3  p- Norm04.png
+1  p- Norm05.png
+C13
+4  p- Norm06.png
+3  p- Norm07.png
+3  p- Norm08.png
+1  p- Norm00.png
+C01
+C06
+C0D
+/// - End Mode 5
+~~~
+/// - Begin Mode 6 - Magic/Range Attack Critical
+C03
+C07
+1  p- Norm00.png
+4  p- Norm01.png
+C41
+10  p- Norm02.png
+C38
+4  p- Crit03.png
+4  p- Crit04.png
+4  p- Crit05.png
+C37
+4  p- Crit06.png
+20  p- Crit07.png
+C42
+C05
+3  p- Norm04.png
+1  p- Norm05.png
+C13
+4  p- Norm06.png
+3  p- Norm07.png
+3  p- Norm08.png
+1  p- Norm00.png
+C01
+C06
+C0D
+/// - End Mode 6
+~~~
+/// - Begin Mode 7 - Close Range Dodge
+C02
+1  p- Norm00.png
+C0E
+3  p- HA01.png
+1  p- HA02.png
+C01
+3  p- HA01.png
+C0D
+~~~
+/// - Begin Mode 8 - Ranged Dodge
+C02
+1  p- Norm00.png
+C0E
+3  p- HA01.png
+1  p- HA02.png
+C01
+3  p- HA01.png
+C0D
+~~~
+/// - Begin Mode 9 - Standing Frames
+1  p- Norm00.png
+C01
+/// - End Mode 9
+~~~
+/// - Begin Mode 10 - Standing Frames 2
+1  p- Norm00.png
+C01
+/// - End Mode 10
+~~~
+/// - Begin Mode 11 - Ranged Standing Frames
+1  p- Norm00.png
+C01
+/// - End Mode 11
+~~~
+/// - Begin Mode 12 - Dodged attack
+C03
+C07
+1  p- Norm00.png
+4  p- Norm01.png
+C41
+4  p- Norm02.png
+15  p- Norm03.png
+C42
+C05
+3  p- Norm04.png
+1  p- Norm05.png
+C13
+4  p- Norm06.png
+3  p- Norm07.png
+3  p- Norm08.png
+1  p- Norm00.png
+C01
+C06
+C0D
+~~~
+/// - End Animation Data

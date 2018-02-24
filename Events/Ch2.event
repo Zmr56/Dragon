@@ -1,0 +1,128 @@
+EventPointerTable(0xd,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+ALIGN 4
+
+TurnBasedEvents:
+END_MAIN
+
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+CharacterBasedEvents:
+CharacterEventBothWays(0x7, RecruitTalk, Eirika, Vanessa)
+END_MAIN
+
+RecruitTalk:
+MUSS 0x30
+Text(Ch12RecruitTalk)
+REMA
+CUSA Vanessa//Tye joins the party!
+MURE 0x05 //Shifts back to map music
+NoFade
+ENDA
+
+RecruitAthild:
+Text(Ch4NotArchRecruitment)
+LOAD1 0x1 AthildGroup
+ENUN
+NoFade
+ENDA
+
+VillageJavelin:
+VillageEventItem(Ch2VillageConvo1, Village, Javelin) //Gives item to the active character (the one visiting)
+ENDA //Just use these for good measure
+
+LocationBasedEvents:
+Village(0x8, RecruitAthild, 8, 7)
+Village(0x9,VillageJavelin, 12,2)
+Seize(1,2)
+Seize(2,13)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+WORD $00
+
+Tutorial:
+WORD $00
+
+TrapData:
+END_MAIN
+
+Units:
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [2,13] 0x00 0x00 0x0 0x00 [Rapier, IronLance, Lockpick] NoAI 
+UNIT Seth Paladin_F Eirika Level(5, Ally, 0) [0,14] 0x00 0x00 0x0 0x00 [SilverSword, SlimSword, Javelin] NoAI 
+UNIT Gilliam Priest Eirika Level(3, Ally, 0) [1,14] 0x00 0x00 0x0 0x00 [Heal, Vulnerary] NoAI 
+UNIT Franz Knight_F Eirika Level(3, Ally, 0) [3,13] 0x00 0x00 0x0 0x00 [SteelLance, Javelin, IronBlade] NoAI 
+UNIT Moulder Archer Eirika Level(1, Ally, 0) [2,12] 0x00 0x00 0x0 0x00 [IronBow, SteelBow, Vulnerary] NoAI
+UNIT
+
+PirateRecruit:
+UNIT Vanessa Pirate 0x00 Level(2, NPC, 0) [5,11] 0x00 0x00 0x0 0x00 [IronAxe, Hammer] AttackInRangeAI 
+UNIT
+
+AthildGroup:
+UNIT Ross Fighter 0x00 Level(4, Ally, 0) [8,8] 0x00 0x00 0x0 0x00 [SteelAxe, HandAxe] NoAI 
+UNIT
+
+Bad:
+UNIT 0x1a Shaman 0x00 Level(5, Enemy, 0) [1,2] 0x00 0x00 0x0 0x00 [Flux, Petrify] GuardTileAI 
+UNIT 0x80 Fighter 0x1a Level(3, Enemy, 1) [7,9] 0x00 0x00 0x0 0x00 [SteelAxe] AttackInRangeAI 
+UNIT 0x80 Archer 0x1a Level(3, Enemy, 1) [8,8] 0x00 0x00 0x0 0x00 [Longbow] AttackInRangeAI 
+UNIT 0x80 Soldier 0x1a Level(3, Enemy, 1) [6,6] 0x00 0x00 0x0 0x00 [Spear] AttackInRangeAI 
+UNIT SpurStrBad Knight 0x1a Level(3, Enemy, 1) [4,6] 0x00 0x00 0x0 0x00 [Spear, SilverAxe] GuardTileAI 
+UNIT SpurStrBad Knight_F 0x1a Level(3, Enemy, 1) [4,5] 0x00 0x00 0x0 0x00 [Spear, SilverSword] GuardTileAI 
+UNIT CounterBad Knight_F 0x1a Level(4, Enemy, 1) [2,4] 0x00 0x00 0x0 0x00 [Spear, SilverSword] GuardTileAI 
+UNIT 0x80 Archer 0x1a Level(4, Enemy, 1) [0,7] 0x00 0x00 0x0 0x00 [SilverBow] AttackInRangeAI 
+UNIT SpurStrBad Shaman 0x1a Level(4, Enemy, 1) [13,5] 0x00 0x00 0x0 0x00 [Nosferatu] GuardTileAI 
+UNIT SpurDefBad Soldier 0x1a Level(4, Enemy, 1) [12,5] 0x00 0x00 0x0 0x00 [Spear] GuardTileAI 
+UNIT 0x80 Mercenary 0x1a Level(4, Enemy, 1) [8,3] 0x00 0x00 0x0 0x00 [IronBlade] AttackInRangeAI 
+UNIT WFBad Mercenary 0x1a Level(3, Enemy, 1) [7,13] 0x00 0x00 0x0 0x00 [IronBlade] AttackInRangeAI 
+UNIT CounterBad Soldier 0x1a Level(3, Enemy, 1) [8,14] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI 
+UNIT 0x80 Mage 0x1a Level(4, Enemy, 1) [12,12] 0x00 0x00 0x0 0x00 [Elfire] AttackInRangeAI 
+UNIT 0x80 Myrmidon 0x1a Level(3, Enemy, 1) [13,8] 0x00 0x00 0x0 0x00 [SilverSword] AttackInRangeAI 
+UNIT CertainBlowBad AxeCavalier 0x1a Level(3, Enemy, 1) [11,7] 0x00 0x00 0x0 0x00 [HandAxe, IronAxe] AttackInRangeAI 
+UNIT
+
+Badder:
+UNIT 0x80 Mage 0x1a Level(4, Enemy, 1) [10,1] 0x00 0x00 0x0 0x00 [Elfire] AttackInRangeAI 
+UNIT AnathemaBad Cavalier_F 0x1a Level(4, Enemy, 1) [14,2] 0x00 0x00 0x0 0x00 [KillerLance, Javelin] AttackInRangeAI 
+UNIT AnathemaBad Cavalier_F 0x1a Level(4, Enemy, 1) [7,2] 0x00 0x00 0x0 0x00 [KillerLance, Javelin] AttackInRangeAI 
+UNIT
+
+ALIGN 4
+
+BeginningScene:
+LOAD2 0x1 Units
+ENUN
+LOAD1 0x1 PirateRecruit
+ENUN
+LOAD1 0x1 Bad
+SetSkills(0x1a, AnathemaID, SealResID, ArmoredBlowID, FrenzyID)
+NoFade
+ENUN
+LOAD1 0x1 Badder
+ENUN
+Text(Ch2Opening)
+NoFade
+ENDA
+
+EndingScene:
+Text(Ch2Ending)
+MNCH 3
+ENDA
+
+MESSAGE Events end at offset CURRENTOFFSET

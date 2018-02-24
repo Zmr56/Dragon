@@ -1,0 +1,133 @@
+EventPointerTable(0xA, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units Units //This unit group determines the number and position of deployment slots when there is a prep screen
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TURN 0x0 BrigandReinforcement [3,0] 0x0
+END_MAIN
+
+BrigandReinforcement:
+ReinforcementEvent(BrigandReinforcementUnit)
+ENDA
+
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+CharacterBasedEvents:
+CharacterEventBothWays(0x7, RecruitTalk1, Eirika, Moulder)
+END_MAIN
+
+RecruitTalk1:
+MUSS 0x30
+Text(Ch12RecruitTalk)
+REMA
+CUSA Moulder//Moulder joins the party!
+MURE 0x05 //Shifts back to map music
+NoFade
+ENDA
+
+LocationBasedEvents:
+Village(0x8,VillagePureWater,8,7)
+Vendor(ShopItems,7,12)
+END_MAIN
+
+VillagePureWater:
+VillageEventItem(Ch2VillageConvo1, Village, PureWater) //Gives item to the active character (the one visiting)
+ENDA //Just use these for good measure
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+DefeatBoss(EndingScene)
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Units:
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [1,6] 0x00 0x00 0x0 0x00 [Rapier, IronLance, Lockpick] NoAI 
+UNIT Seth Paladin_F Eirika Level(5, Ally, 0) [0,4] 0x00 0x00 0x0 0x00 [SilverSword, SlimSword, Javelin] NoAI 
+UNIT Gilliam Priest Eirika Level(3, Ally, 0) [2,7] 0x00 0x00 0x0 0x00 [Heal, Vulnerary] NoAI 
+UNIT Franz Knight_F Eirika Level(3, Ally, 0) [0,5] 0x00 0x00 0x0 0x00 [SteelLance, Javelin, IronBlade] NoAI 
+UNIT
+
+MoulderNPC:
+UNIT Moulder Archer 0x00 Level(1, NPC, 0) [4,9] 0x00 0x00 0x0 0x00 [IronBow, SteelBow, Vulnerary] PursueWithoutHeedAI 
+UNIT
+
+Bad:
+UNIT LnDBad Myrmidon Breguet Level(2, Enemy, 1) [6,9] 0x00 0x00 0x0 0x00 [SilverSword] AttackInRangeAI 
+UNIT 0x80 Mage Breguet Level(2, Enemy, 1) [7,10] 0x00 0x00 0x0 0x00 [Thunder] AttackInRangeAI 
+UNIT SavageBlowBad Archer Breguet Level(2, Enemy, 1) [5,7] 0x00 0x00 0x0 0x00 [Longbow] AttackInRangeAI 
+UNIT 0x80 Fighter Breguet Level(2, Enemy, 1) [11,7] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT 0x80 Soldier Breguet Level(2, Enemy, 1) [10,6] 0x00 0x00 0x0 0x00 [Javelin] AttackInRangeAI 
+UNIT 0x80 Soldier Breguet Level(2, Enemy, 1) [5,4] 0x00 0x00 0x0 0x00 [Javelin] AttackInRangeAI 
+UNIT CounterBad Mercenary Breguet Level(3, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [Armourslayer] AttackInRangeAI 
+UNIT 0x80 Cavalier Breguet Level(3, Enemy, 1) [3,0] 0x00 0x00 0x0 0x00 [Longsword] PursueWithoutHeedAI 
+UNIT CertainBlowBad AxeCavalier Breguet Level(3, Enemy, 1) [2,1] 0x00 0x00 0x0 0x00 [HandAxe] PursueWithoutHeedAI 
+UNIT Breguet Fighter 0x00 Level(3, Enemy, 1) [3,1] 0x00 0x00 0x0 0x00 [SilverAxe, HandAxe] AttackInRangeAI
+UNIT
+
+BrigandReinforcementUnit:
+UNIT 0x80 Brigand 0x00 Level(1, Enemy, 1) [28,0] 0x02 0x00 0x0 0x00 [IronAxe] BrigandAI
+UNIT
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+ENUT 1 //no more boss quotes
+ENUT 9
+LOAD2 0x1 Units //0x0 instead of 0x1 seems to be for allies on maps with prep screens
+ENUN
+LOAD1 0x1 Bad
+SetSkills(Breguet, ElbowRoomID, SealDefID, QuickDrawID, IntimidateID)
+ENUN
+LOAD1 0x1 MoulderNPC
+ENUN
+CAM1 [14,0]
+STAL 0x16
+CAM1 Void
+STAL 0x16
+// GotoPrepScreen
+CenterTutorialTextBox
+TUTORIALTEXTBOXSTART
+TEXTSHOW CH1Opening
+TEXTEND
+REMA
+NoFade
+ENDA
+
+ShopItems:
+SHLI Vulnerary Heal
+ALIGN 4
+
+EndingScene:
+Text(Ch1Ending)
+ENUT 0x89 //location shenanigans
+MNCH 0x2
+NoFade
+ENDA
+
+MESSAGE Events end at offset CURRENTOFFSET

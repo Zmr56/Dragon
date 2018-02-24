@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="18" height="18" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="01000203" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
+  <image source="Tilesets/FE8/01000203.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Main" width="18" height="18">
+  <properties>
+   <property name="Anims1" value="5"/>
+   <property name="ChapterID" value="4"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="0x16"/>
+   <property name="MapID" value="0x15"/>
+   <property name="ObjectType" value="1"/>
+   <property name="PaletteID" value="2"/>
+   <property name="TileConfig" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxdlMFvTFEUh+97N0UstCahLTtJO+2EYhqC7Wg6tWIakkoQYSgWGo3GQlkIu2kFWyxEsKiE2lvWgkgl5T+gCREbYek7Ob+X3lp8ue/eM+d3zzn3nGnGEGbzEGagh+8zIYRhOAzbYQBqsBFbCW4l36/gNcxDi/MZmEPnvPzLMA7t8luERhbCO9Ynwc/M1gf9UInuY9ThdnAt01hEdxlO439F3z3SsriHoA4jcCjRKSuWuu77ic+G3BmCF+yrrIOsb6ADxvG/ABej3/8cLsMzxTIsvVHpvBfb8hWtL6wlizXzXJtoHVQMlktNuU2oxr9yr/3L3HULrW+cLeUeV0d0+17O9oTVb9GWeW2NNZlrzSVaDejnvAK7otu6TFtaU/aNbR4+w7Xgd6+zesFZxWh9stM04G/uvgekU/AH7pld+/2wg/0AfFSOlv93+AFdccV3DLphc6K1NfPv7iRfi83e3vK0utTUB8XvrN6G1fp6Ett0WN1v1n+tzGtpdVlg7WW/SXeN6r597N/CcemYPe03u7+lt/4Ay4prEk7ASTgFWxSf2cb05mm/Lei9Lbdm5jHYfN2HabgBNxX30+gxm85u1qqdZ953VTgXvW/SfE3rITyCx6qPxX2UdQqOcNaQTqf6rV19k+ZbzMCl6HNd0vxE9cxaxWFzYL3wW+v6/+Zrlt/f1axbLNYnZelYDuazJN9eDr/Cneh9WpLtk2ap+N8oYrMaXcV+THPUJ+0HiWZBRf38D2vdhg8=
+  </data>
+ </layer>
+ <layer name="NorthVillageDestroyed" width="18" height="18" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="0"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="15"/>
+   <property name="Y" value="1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBh40MHMwNAJxF3MlJmzAqh/JRCvotCcE0D9J4H4FIXmjIJRMAqGFgAAg1QGDQ==
+  </data>
+ </layer>
+ <layer name="NorthVillageSaved" width="18" height="18" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="1"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="16"/>
+   <property name="Y" value="3"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF2IDiQDtgFIyCUUB3AACICAAi
+  </data>
+ </layer>
+ <layer name="MiddleVillageDestroyed" width="18" height="18" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="2"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="9"/>
+   <property name="Y" value="10"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BkgQ5mBoZOIO5ipsycFUD9K4F4FYXmnADqPwnEpyg0ZxRQDgDFMwYN
+  </data>
+ </layer>
+ <layer name="MiddleVillageSaved" width="18" height="18" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="3"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="10"/>
+   <property name="Y" value="12"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDDRQHGgHjAIwAAA3mAAi
+  </data>
+ </layer>
+ <layer name="SouthVillageDestroyed" width="18" height="18" visible="0">
+  <properties>
+   <property name="Height" value="3"/>
+   <property name="ID" value="4"/>
+   <property name="Width" value="3"/>
+   <property name="X" value="15"/>
+   <property name="Y" value="13"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDGfQwczA0AnEXcyUmbMCqH8lEK+i0JwTQP0ngfgUhebQAgAAGagGDQ==
+  </data>
+ </layer>
+ <layer name="SouthVillageSaved" width="18" height="18" visible="0">
+  <properties>
+   <property name="Height" value="1"/>
+   <property name="ID" value="5"/>
+   <property name="Width" value="1"/>
+   <property name="X" value="16"/>
+   <property name="Y" value="15"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjAL6AsWBdgAOAAAYqAAi
+  </data>
+ </layer>
+</map>

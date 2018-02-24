@@ -1,0 +1,27 @@
+#define Freespace 0xE80000
+#define BLH(offset) "BYTE $01 $4B $9E $46 $00 $F8 $01 $E0; POIN offset"
+#include eastdlib.event
+#include "Extensions/Hack Installation.txt"
+#include "Tools/Tool Helpers.txt"
+PUSH
+	//Replace the load str routine by a check to load either str or mag
+	ORG 0x2AB50
+	BLH(LoadMagOrStr)
+	BYTE 0 0
+	
+	//Loads mag instead of str for magic swords
+	ORG 0x2A4C0
+	BLH(MagicSword)
+	BYTE 0 0
+	
+POP
+ORG Freespace
+ALIGN 4
+LoadMagOrStr:
+#incbin "Code/loadstrormag.dmp"
+
+ALIGN 4
+MagicSword:
+#incbin "Code/MagicSword.dmp"
+
+ALIGN 4
